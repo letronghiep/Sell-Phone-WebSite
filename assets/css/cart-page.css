@@ -1,0 +1,6 @@
+.delete__product-btn:hover {
+    color: red;
+}
+.table>:not(caption)>*>* {
+    padding: 1rem 1rem;
+}

@@ -1,0 +1,27 @@
+.other {
+    position: relative;
+}
+.other::before {
+    position: absolute;
+    content: "";
+    width: 40%;
+    left: 0%;
+    top: 50%;
+    height: 1px;
+    background-color: #ccc;
+}
+.other::after {
+    position: absolute;
+    content: "";
+    width: 40%;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-color: #ccc;
+}
+.form-regis {
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+.text-desc:hover {
+    text-decoration: revert;
+}
