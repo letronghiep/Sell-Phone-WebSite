@@ -1,5 +1,6 @@
 var listProduct = document.querySelector("#products");
 let resultProduct = document.querySelector("#results-products");
+const popUp = document.querySelector(".pop-up");
 let count = 0;
 let cartList = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 let total = 1;
@@ -70,8 +71,11 @@ class Product {
         data.price,
         data.thumbnail
       );
-      resultProduct.appendChild(ele);
+      resultProduct.innerHTML += ele;
     });
+    if (filterArr.length == 0) {
+      popUp.classList.remove("d-none");
+    }
   }
   // Handle Cart
   saveCart() {
@@ -169,6 +173,7 @@ class Product {
         const index = cartList.findIndex((item) => item.name === todoText);
         cartList.splice(index, 1);
         localStorage.setItem("shoppingCart", JSON.stringify(cartList));
+        window.contentLoaded = true;
       });
     });
   }
