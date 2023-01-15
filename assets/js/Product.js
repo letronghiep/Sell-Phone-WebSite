@@ -12,7 +12,7 @@ class Product {
   }
   createProduct(name, brand, price, thumbnail) {
     return `
-        <div class="col-lg-3 col-sm-12 mb-sm-3 col-xs-12 flex-wrap d-flex flex-column flex-lg-row">
+        <div class="col-lg-3 col-sm-12 mb-sm-3 col-xs-12 flex-wrap d-flex flex-column flex-lg-row g-3">
             <div class="card d-flex flex-column">
             <a class="justify-content-center d-flex align-items-center" href="products-detail.html?title=${name}&brand=${brand}&price=${price}&thumbnail=${thumbnail}">
             <img class="card-img-top img-fluid" src="${thumbnail}" style="width: auto;"></a>
